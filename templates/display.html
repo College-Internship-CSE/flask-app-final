@@ -6,10 +6,14 @@
   <body>
     <h1>Selected Data</h1>
 
+    {% for col in selected_columns  %}
+            <h1>{{col}}</h1>
+    {% endfor %}
+
     {% for row in data %}
     <tr>
       <h1>{{ row['A'] }}</h1>
-      <h2>{{ row['B'] }}</>
+      <h2>{{ row['B'] }}</h2>
       <p>{{ row['C'] }}</p>
     </tr>
     {% endfor %}

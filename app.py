@@ -44,7 +44,7 @@ def display(name):
 
     data = df.to_dict(orient='records')
 
-    return render_template('display.html', data=data)
+    return render_template('display.html', data=data, selected_columns= selected_columns)
 
 
 if __name__ == '__main__':

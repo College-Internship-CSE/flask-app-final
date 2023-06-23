@@ -1,10 +1,8 @@
 <!-- inheriting the base template -->
-{% extends 'base.html' %} 
-
+{% extends 'base.html' %}
 
 <!-- index content -->
 {% block body %}
-
 
 <!-- <style>
   .center-content {
@@ -15,68 +13,130 @@
   }
 </style> -->
 
-<div class="center-content flex justify-content-center align-items-center mt-5">
+<div class="container landing">
 
-<div class="container">
-  <div class="row">
-    <!-- left section -->
-    <div class="col-md-6 col-sm-12">
-      <img class="img-fluid" src="https://img.collegepravesh.com/2016/03/MIT-Manipal.jpg" alt="mit image">
-    </div>
 
-    <!-- right section -->
-    <div class="col-md-6 col-sm-12">
-      <h2 class="fw-light">Welcome to the official page of <span class="text-primary">MIT CSE</span></h2>
-      <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary px-5 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  <h5>How to use the website</h5>
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Greetings!!</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="hero row justify-content-center">
+
+    <div class="col-8 text-center hero-blue">
+
+      <div class="row">
+        <div class="col">
+          <img class="hero-img" src="../static/images/search.png" alt="search=img">
+          <img class="hero-img" src="../static/images/book.png" alt="">
+        </div>
+        
       </div>
-      <div class="modal-body">
-      <h3>Intro the the website</h3>
-      <p>You can navigate to the navbar and click on any of the categories to find information about the particular field</p>
+
+      <div class="row">
+        <div class="col">
+          <img class="hero-img" src="../static/images/education.png" alt="">
+          <img class="hero-img" src="../static/images/online-test.png" alt="">
+
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
+     
     </div>
+
+
+    <div class="col-4 text-center d-flex flex-column justify-content-center align-items-center">
+
+      <h2 class=" intro">
+        Welcome to <br> the official page of <br>
+        <span class="text-primary">MIT CSE</span>
+      </h2>
+
+      <p class="intro-p">
+       <span class="text-secondary">Information about our departments </span>  <br>
+        <span class="text-success">Conferences</span> , <span class="text-danger">Journals</span> <br>
+        <span class="text-primary">Books and Book chapters </span>,<br>
+        <span class="text-warning">Patents</span> and <span class="text-info">Phd</span>
+      </p>
+
+      <button type="button" class="btn btn-outline-primary btn-lg">
+          Know More
+      </button>
+
+
+    </div> 
+
   </div>
-</div>
-      
-    </div>
-  </div>
-</div>
 
 </div>
-
-
-<div class="container text-center">
-  <div class="row row-cols-3">
-    <div class="col card text-bg-primary mb-3" style="min-height: 10rem;">
-      Books and Book Chapters<div class="card-header">Header</div>
-      
-    </div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-  </div>
-</div>
-
-
-</div>
-
-
   
+  
+<div class="center-content flex justify-content-center align-items-center mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- left section -->
+      <div class="col-md-6 col-sm-12">
+        <img
+          class="img-fluid"
+          src="https://img.collegepravesh.com/2016/03/MIT-Manipal.jpg"
+          alt="mit image"
+        />
+      </div>
+
+      <!-- right section -->
+      <div class="col-md-6 col-sm-12">
+        <h2 class="fw-light">
+          Welcome to the official page of
+          <span class="text-primary">MIT CSE</span>
+        </h2>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary px-5 py-2"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <h5>How to use the website</h5>
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Greetings!!
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <h3>Intro the the website</h3>
+                <p>
+                  You can navigate to the navbar and click on any of the
+                  categories to find information about the particular field
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock body %}
-
-
-
-

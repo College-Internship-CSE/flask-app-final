@@ -1,39 +1,73 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Display Data</title>
-  </head>
-  <body>
-    <h1>Selected Data</h1>
+<!-- inheriting the base template -->
+{% extends 'base.html' %}
+<!-- BODY starts -->
+{% block body %}
 
-    {% for col in selected_columns  %}
-            <h1>{{col}}</h1>
-    {% endfor %}
+<div class="container">
+  <div
+    class="my-3 mx-auto d-flex justify-content-end"
+    role="group"
+    aria-label="Basic example"
+  >
+    <a
+      type="button"
+      class="btn btn-outline-secondary mx-1"
+      href="/show/{{show}}/{{name}}/0"
+      >CAY</a
+    >
+    <a
+      type="button"
+      class="btn btn-outline-secondary mx-1"
+      href="/show/{{show}}/{{name}}/1"
+      >CAY m1</a
+    >
+    <a
+      type="button"
+      class="btn btn-outline-secondary mx-1"
+      href="/show/{{show}}/{{name}}/2"
+      >CAY m2</a
+    >
+    <a
+      type="button"
+      class="btn btn-outline-secondary mx-1"
+      href="/show/{{show}}/{{name}}/3"
+      >CAY m3</a
+    >
+    <a
+      type="button"
+      class="btn btn-outline-secondary mx-1"
+      href="/show/{{show}}/{{name}}/4"
+      >CAY m4</a
+    >
+  </div>
+</div>
 
-    {% for row in data %}
-    <tr>
-      <h1>{{ row['A'] }}</h1>
-      <h2>{{ row['B'] }}</h2>
-      <p>{{ row['C'] }}</p>
-    </tr>
-    {% endfor %}
-    <!-- <table>
-        <thead>
-            <tr>
-                <th>Column1</th>
-                <th>Column2</th>
-                <th>Column3</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in data %}
-                <tr>
-                    <td>{{ row['A'] }}</td>
-                    <td>{{ row['B'] }}</td>
-                    <td>{{ row['C'] }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table> -->
-  </body>
-</html>
+<!-- <div class="container">
+  {% for col in selected_columns %}
+  <h1>{{col}}</h1>
+  {% endfor %} -->
+
+{% if data|length > 0 %} {% for row in data %}
+<div class="container text-center"
+data-aos="zoom-in-up"
+data-aos-delay="200"
+data-aos-duration="1000"
+>
+  <ul class="list-group my-3">
+    <li class="list-group-item list-group-item-success">
+      <strong>{{selected_columns[0]}} : </strong>{{ row['A']}} <br />
+      <strong>{{selected_columns[2]}} : </strong>{{ row['C']}} <br />
+      <strong>{{selected_columns[1]}} : </strong>{{ row['B']}}
+    </li>
+  </ul>
+</div>
+{% endfor %} {% else %}
+
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    No information to show
+    <br />
+    Check out another year or category
+  </div>
+</div>
+{% endif %} {% endblock body %}

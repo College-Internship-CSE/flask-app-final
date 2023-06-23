@@ -9,8 +9,8 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/show/<string:name>')
-def display(name):
+@app.route('/show/<string:name>/<int:s_num>')
+def display(name,s_num):
     file_dict = {'book': {'directory': '5.8.1.3 Book or Book Chapters.xlsx', 'skiprows': 4},
                 'journal': {'directory': '5.8.1.1 Journal Publications.xlsx', 'skiprows': 5},
                 'conference': {'directory': '5.8.1.2 Conference Proceedings.xlsx', 'skiprows': 5},
@@ -31,7 +31,7 @@ def display(name):
     skiprows = file_dict[name]['skiprows']
 
 
-    sheet_index = 0
+    sheet_index = s_num
     df = pd.read_excel(file_path, skiprows=skiprows, sheet_name=sheet_index)
     # Add the column names you wish to display
     selected_columns = file_cols[name]
@@ -40,11 +40,11 @@ def display(name):
     df = df.dropna()
     df = df.rename(columns={selected_columns[0]: 'A', selected_columns[1]: 'B', selected_columns[2]: 'C'})
 
-    print(df)
+    # print(df)
 
     data = df.to_dict(orient='records')
 
-    return render_template('display.html', data=data, selected_columns= selected_columns)
+    return render_template('display.html', data=data, selected_columns= selected_columns, name=name)
 
 
 if __name__ == '__main__':

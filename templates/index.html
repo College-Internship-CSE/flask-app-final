@@ -3,140 +3,228 @@
 
 <!-- index content -->
 {% block body %}
-
-<!-- <style>
-  .center-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  }
-</style> -->
-
-<div class="container landing">
-
-
-
-  <div class="hero row justify-content-center">
-
-    <div class="col-8 text-center hero-blue">
-
-      <div class="row">
-        <div class="col">
-          <img class="hero-img" src="../static/images/search.png" alt="search=img">
-          <img class="hero-img" src="../static/images/book.png" alt="">
-        </div>
-        
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <img class="hero-img" src="../static/images/education.png" alt="">
-          <img class="hero-img" src="../static/images/online-test.png" alt="">
-
-        </div>
-      </div>
-     
-    </div>
-
-
-    <div class="col-4 text-center d-flex flex-column justify-content-center align-items-center">
-
-      <h2 class=" intro">
-        Welcome to <br> the official page of <br>
-        <span class="text-primary">MIT CSE</span>
-      </h2>
-
-      <p class="intro-p">
-       <span class="text-secondary">Information about our departments </span>  <br>
-        <span class="text-success">Conferences</span> , <span class="text-danger">Journals</span> <br>
-        <span class="text-primary">Books and Book chapters </span>,<br>
-        <span class="text-warning">Patents</span> and <span class="text-info">Phd</span>
-      </p>
-
-      <button type="button" class="btn btn-outline-primary btn-lg">
-          Know More
-      </button>
-
-
-    </div> 
-
-  </div>
-
-</div>
-  
-  
-<div class="center-content flex justify-content-center align-items-center mt-5">
-  <div class="container">
-    <div class="row">
-      <!-- left section -->
-      <div class="col-md-6 col-sm-12">
-        <img
-          class="img-fluid"
-          src="https://img.collegepravesh.com/2016/03/MIT-Manipal.jpg"
-          alt="mit image"
-        />
-      </div>
-
-      <!-- right section -->
-      <div class="col-md-6 col-sm-12">
-        <h2 class="fw-light">
-          Welcome to the official page of
-          <span class="text-primary">MIT CSE</span>
-        </h2>
-        <!-- Button trigger modal -->
-        <button
-          type="button"
-          class="btn btn-primary px-5 py-2"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          <h5>How to use the website</h5>
-        </button>
-
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Greetings!!
+<div class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+    <!-- hero section -->
+    <section id="hero">
+      <header class="bg-primary pt-5">
+        <div class="container px-5">
+          <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="my-5 text-center text-xl-start">
+                <h1 class="display-5 fw-bolder text-white mb-2">
+                  Welcome to the official page for
+                  <span class="text-warning">MIT CSE</span>
                 </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
+                <br />
+                <p class="lead fw-normal text-white-50 mb-4">
+                  Conference Journals Books and Book Chapters <br />
+                  Patents and Phd
+                </p>
+                <br />
+                <div
+                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start"
+                >
+                  <a class="btn btn-outline-light btn-lg px-4" href="#features"
+                    >Learn More</a
+                  >
+                </div>
               </div>
-              <div class="modal-body">
-                <h3>Intro the the website</h3>
-                <p>
-                  You can navigate to the navbar and click on any of the
-                  categories to find information about the particular field
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+              <img
+                class="img-fluid rounded-3 mt-5"
+                src="../static/images/mit.jpeg"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,224L80,186.7C160,149,320,75,480,58.7C640,43,800,85,960,106.7C1120,128,1280,128,1360,128L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- hero section ends -->
+
+    <!-- section features -->
+    <section class="" id="features">
+      <div class="container px-5">
+        <div class="row gx-5">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h2 class="fw-bolder mb-0">A better way to know more</h2>
+            <!-- Button trigger modal -->
+          </div>
+          <div class="col-lg-8">
+            <div class="row gx-5 row-cols-1 row-cols-md-2">
+              <div class="col mb-5 h-100">
+                <div
+                  class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+                >
+                  <i class="bi bi-bookmark"></i>
+                </div>
+                <h2 class="h5">Informative</h2>
+                <p class="mb-0">
+                  Get to know about Manipal Institute of Technology's CSE
+                  department.
                 </p>
               </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
+              <div class="col mb-5 h-100">
+                <div
+                  class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
                 >
-                  Close
-                </button>
+                  <i class="bi bi-tags"></i>
+                </div>
+                <h2 class="h5">Categorised</h2>
+                <p class="mb-0">
+                  Various categories under the department of Computer Science
+                </p>
+              </div>
+              <div class="col mb-5 mb-md-0 h-100">
+                <div
+                  class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+                >
+                  <i class="bi bi-brightness-alt-high"></i>
+                </div>
+                <h2 class="h5">Featured title</h2>
+                <p class="mb-0">
+                  Easy to use Interface that makes it simple to find data
+                </p>
+              </div>
+              <div class="col h-100">
+                <div
+                  class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+                >
+                  <i class="bi bi-toggles2"></i>
+                </div>
+                <h2 class="h5">Updated</h2>
+                <p class="mb-0">
+                  This website is update to date with the data of current and
+                  previous academic years
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="d-flex align-items-center justify-content-center my-5">
+        <button
+          type="button"
+          class="btn btn-outline-primary px-5"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <h4>How to use the Website</h4>
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                To use the website
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <p>
+                You can navigate to the top of the website <br />
+                to find various categories. Select any of them <br />
+                to know about the field. You can also filter data according
+                <br />
+                to the year to see information from the previouse academic
+                years.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Accordian -->
+    <div class="container">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              What is this website built on ?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              This website is built on HTML, CSS , Bootstrap and flask
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Who developed this website ?
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              This website was built by Ayushman and Harry under the guidance of
+              Mr. Ashwath Rao in the year 2023.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <hr />
+  </main>
 </div>
 
 {% endblock body %}

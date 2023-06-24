@@ -17,7 +17,10 @@
 <div class="container">
     <div class="row mt-5">
         {% for dept,head in heads.items() %}
-        <div class="col-sm-12 col-md-4 ">
+        <div class="col-sm-12 col-md-4 "
+        data-aos="zoom-in"
+        data-aos-delay="200"
+        data-aos-duration="1000">
            <div class="custom-card">
               <h4 style="color: black;">{{dept}}</h4> 
                <h5 style="padding-top: 1rem;">{{head}}</h5>

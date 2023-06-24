@@ -36,6 +36,7 @@
     font-size: 1.5rem;
   }
 
+/* To pull the content below the up */
 #features{
     margin-top: -100px;
 }
@@ -56,3 +57,9 @@ hr
     flex-direction: column;
     justify-content: space-between;
   }
+
+ @media (max-width: 600px){
+    #features{
+        margin-top: 0;
+    }
+ } 

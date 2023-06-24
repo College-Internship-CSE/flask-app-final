@@ -1,81 +1,79 @@
 <!-- inheriting the base template -->
-{% extends 'base.html' %}
-
-{% block title %}
-    {{name}}
-{% endblock title %}
-MIT CSE
+{% extends 'base.html' %} {% block title %} {{name}} {% endblock title %} MIT
+CSE
 <!-- BODY starts -->
 {% block body %}
 
-
 <main>
-<div class="container">
-  <div
-    class="my-3 mx-auto d-flex justify-content-end"
-    role="group"
-    aria-label="Basic example"
-  >
-    <a
-      type="button"
-      class="btn btn-outline-secondary mx-1"
-      href="/show/{{show}}/{{name}}/0"
-      >CAY</a
-    >
-    <a
-      type="button"
-      class="btn btn-outline-secondary mx-1"
-      href="/show/{{show}}/{{name}}/1"
-      >CAY m1</a
-    >
-    <a
-      type="button"
-      class="btn btn-outline-secondary mx-1"
-      href="/show/{{show}}/{{name}}/2"
-      >CAY m2</a
-    >
-    <a
-      type="button"
-      class="btn btn-outline-secondary mx-1"
-      href="/show/{{show}}/{{name}}/3"
-      >CAY m3</a
-    >
-    <a
-      type="button"
-      class="btn btn-outline-secondary mx-1"
-      href="/show/{{show}}/{{name}}/4"
-      >CAY m4</a
-    >
+  <div class="container" style="display: flex; justify-content: space-between">
+    <h2 class="pt-3" style="font-family: Arial, Helvetica, sans-serif;">
+      {% if name == 'conference' %} Conferences {% endif %} {% if name == 'book'
+      %} Book Chapters {% endif %} {% if name == 'journal' %} Journals {% endif
+      %} {% if name == 'patent' %} Patents {% endif %} {% if name == 'phd' %}
+      PhD Guided {% endif %}
+    </h2>
+    <div class="my-3" role="group" aria-label="Basic example">
+      <a
+        type="button"
+        class="btn btn-outline-secondary mx-1"
+        href="/show/{{show}}/{{name}}/0"
+        >CAY</a
+      >
+      <a
+        type="button"
+        class="btn btn-outline-secondary mx-1"
+        href="/show/{{show}}/{{name}}/1"
+        >CAY m1</a
+      >
+      <a
+        type="button"
+        class="btn btn-outline-secondary mx-1"
+        href="/show/{{show}}/{{name}}/2"
+        >CAY m2</a
+      >
+      <a
+        type="button"
+        class="btn btn-outline-secondary mx-1"
+        href="/show/{{show}}/{{name}}/3"
+        >CAY m3</a
+      >
+      <a
+        type="button"
+        class="btn btn-outline-secondary mx-1"
+        href="/show/{{show}}/{{name}}/4"
+        >CAY m4</a
+      >
+    </div>
   </div>
-</div>
 
-<!-- <div class="container">
+  <!-- <div class="container">
   {% for col in selected_columns %}
   <h1>{{col}}</h1>
   {% endfor %} -->
 
-{% if data|length > 0 %} {% for row in data %}
-<div class="container text-center"
-data-aos="zoom-in-up"
-data-aos-delay="100"
-data-aos-duration="700"
->
-  <ul class="list-group my-3">
-    <li class="list-group-item list-group-item-success">
-      <strong>{{selected_columns[0]}} : </strong>{{ row['A']}} <br />
-      <strong>{{selected_columns[2]}} : </strong>{{ row['C']}} <br />
-      <strong>{{selected_columns[1]}} : </strong>{{ row['B']}}
-    </li>
-  </ul>
-</div>
-{% endfor %} {% else %}
-
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    No information to show
-    <br />
-    Check out another year or category
+  {% if data|length > 0 %} {% for row in data %}
+  <div
+    class="container text-center"
+    data-aos="zoom-in-up"
+    data-aos-delay="100"
+    data-aos-duration="700"
+  >
+    <ul class="list-group my-3">
+      <li class="list-group-item list-group-item-success">
+        <strong>{{selected_columns[0]}} : </strong>{{ row['A']}} <br />
+        <strong>{{selected_columns[2]}} : </strong>{{ row['C']}} <br />
+        <strong>{{selected_columns[1]}} : </strong>{{ row['B']}}
+      </li>
+    </ul>
   </div>
-</div>
-{% endif %} {% endblock body %}
+  {% endfor %} {% else %}
+
+  <div class="container">
+    <div class="alert alert-info text-center" role="alert">
+      No information to show
+      <br />
+      Check out another year or category
+    </div>
+  </div>
+  {% endif %} {% endblock body %}
 </main>

@@ -36,7 +36,7 @@ def display(name,s_num):
                  'journal': ['Author names as \nappear in paper', 'Name of the Journal', 'Title of Publication'],
                  'conference': ['Author names as \nappear in paper', 'Conference name', 'Title of paper'],
                  'patent': ['Name of the Faculty', 'Title of the patent\napplication', 'Patent office'],
-                 'phd': ['Name of the \nResearch Scholar', 'Thesis title', 'Name of the Guide']}
+                 'phd': ['Name of the Student', 'Thesis title', 'Name of the Guide']}
 
 
 
@@ -58,6 +58,8 @@ def display(name,s_num):
     # print(df)
 
     data = df.to_dict(orient='records')
+    
+    
 
     return render_template('display.html', data=data, selected_columns= selected_columns, name=name)
 

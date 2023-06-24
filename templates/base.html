@@ -51,6 +51,14 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
 
+            <script>
+                var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  return new bootstrap.Dropdown(dropdownToggleEl)
+});
+
+            </script>
+
             <li class="nav-item dropdown" data-bs-theme="light">
                 <a
                   class="nav-link dropdown-toggle"
@@ -63,10 +71,11 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/show/conference/0">Conferences</a></li>
-                  <li><a class="dropdown-item" href="/show/journal/0">Journals</a></li>
                   <li>
-                    <a class="dropdown-item" href="/show/book/0">Books and <br> Book Chapters</a>
+                    <a class="dropdown-item" href="/show/book/0">Book Chapters</a>
                   </li>
+                  <li><a class="dropdown-item" href="/show/journal/0">Journals</a></li>
+                  
                 </ul>
               </li>
 
@@ -79,7 +88,10 @@
               <a class="nav-link hover-underline-animation" href="/show/phd/0">Phd Guided</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="/show/heads">Dept. Heads</a>
+                <a class="nav-link hover-underline-animation" href="/show/heads">Research Groups <div class="card-group">
+                
+                </div>
+                </a>
             </li>
            
           </ul>

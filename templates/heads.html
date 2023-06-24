@@ -1,17 +1,27 @@
 <!-- inheriting the base template -->
 {% extends 'base.html' %} {% block title %} Heads {% endblock title %} {% block
-body %}
-
-{% for department, head in heads.items() %}
-<h2>{{ department }}</h2>
-<p>Head: {{ head }}</p>
-<p>Members:</p>
-{% for member in members[department] %}
-    <p>{{ member }}</p>
-{% endfor %}
-<br>
-
-
-{% endfor %}
-
- {% endblock body %}
+    body %}
+    
+    <div class="container mt-5">
+      <div class="row">
+        {% for department, head in heads.items() %}
+          <div class="col-md-6 text-center">
+            <div class="card mb-4">
+              <div class="card-header bg-light text-white">
+                <h2 style="color: black;">{{ department }}</h2>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Head(s): {{ head }}</h5>
+                <p class="card-text text-secondary">Members:</p>
+                {% for member in members[department] %}
+                  <p class="card-text">{{ member }}</p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    {% endblock body %}
+    

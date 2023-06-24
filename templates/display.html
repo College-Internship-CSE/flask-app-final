@@ -1,8 +1,15 @@
 <!-- inheriting the base template -->
 {% extends 'base.html' %}
+
+{% block title %}
+    {{name}}
+{% endblock title %}
+MIT CSE
 <!-- BODY starts -->
 {% block body %}
 
+
+<main>
 <div class="container">
   <div
     class="my-3 mx-auto d-flex justify-content-end"
@@ -50,8 +57,8 @@
 {% if data|length > 0 %} {% for row in data %}
 <div class="container text-center"
 data-aos="zoom-in-up"
-data-aos-delay="200"
-data-aos-duration="1000"
+data-aos-delay="100"
+data-aos-duration="700"
 >
   <ul class="list-group my-3">
     <li class="list-group-item list-group-item-success">
@@ -71,3 +78,4 @@ data-aos-duration="1000"
   </div>
 </div>
 {% endif %} {% endblock body %}
+</main>

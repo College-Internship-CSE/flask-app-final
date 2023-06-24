@@ -1,6 +1,10 @@
 <!-- inheriting the base template -->
 {% extends 'base.html' %}
 
+{% block title %}
+    MIT CSE
+{% endblock title %}
+
 <!-- index content -->
 {% block body %}
 <div class="d-flex flex-column h-100">
@@ -65,8 +69,8 @@
     <section class="" id="features">
       <div class="container px-5"
       data-aos="zoom-in-down"
-            data-aos-delay="200"
-            data-aos-duration="800">
+            data-aos-delay="100"
+            data-aos-duration="600">
         <div class="row gx-5">
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h2 class="fw-bolder mb-0">A better way to know more</h2>
@@ -127,8 +131,8 @@
 
       <div class="d-flex align-items-center justify-content-center my-5"
       data-aos="zoom-in-up"
-            data-aos-delay="300"
-            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-duration="600"
             >
         <button
           type="button"
@@ -139,6 +143,9 @@
           <h4>How to use the Website</h4>
         </button>
       </div>
+   
+
+
 
       <!-- Modal -->
       <div
@@ -183,8 +190,8 @@
           </div>
         </div>
       </div>
+   
     </section>
-
     <hr />
 
     <!-- Accordian -->

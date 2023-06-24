@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MIT CSE</title>
+    <title>{% block title %}
+        
+    {% endblock title %}</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -48,49 +50,38 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link hover-underline-animation"
-                aria-current="page"
-                href="/show/conference/0"
-                >Conference</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="/show/journal/0"
-                >Journals</a
-              >
-            </li>
-            <li class="nav-item" id="book">
-              <a class="nav-link hover-underline-animation" href="/show/book/0"
-                >Book Chapters</a>
-            </li>
+
+            <li class="nav-item dropdown" data-bs-theme="light">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Publications
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/show/conference/0">Conferences</a></li>
+                  <li><a class="dropdown-item" href="/show/journal/0">Journals</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/show/book/0">Books and <br> Book Chapters</a>
+                  </li>
+                </ul>
+              </li>
+
             <li class="nav-item">
               <a class="nav-link hover-underline-animation" href="/show/patent/0"
                 >Patents</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="/show/phd/0">Phd</a>
+              <a class="nav-link hover-underline-animation" href="/show/phd/0">Phd Guided</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+                <a class="nav-link hover-underline-animation" href="/show/heads">Dept. Heads</a>
             </li>
+           
           </ul>
         </div>
       </div>
@@ -99,18 +90,24 @@
 
     <!-- Footer -->
     <footer class="text-center text-white bg-primary">
-      <!-- Grid container -->
-      <div class="container p-4"></div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2023 Copyright: Manipal Institute of Technology
-        <br />
-        all rights reserved
-      </div>
-      <!-- Copyright -->
-    </footer>
+        <!-- Grid container -->
+        <div class="container p-4"></div>
+        <!-- Grid container -->
+      
+        <!-- Year dynamically loaded with JavaScript -->
+        <div id="current-year" class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          <!-- The year will be inserted here -->
+        </div>
+      
+        <script>
+          // Get the current year
+          var currentYear = new Date().getFullYear();
+      
+          // Update the element with the current year
+          document.getElementById("current-year").innerHTML = "© " + currentYear + " Manipal Institute of Technology<br />all rights reserved";
+        </script>
+      </footer>
+      
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

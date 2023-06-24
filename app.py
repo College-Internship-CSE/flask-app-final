@@ -8,6 +8,21 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/show/heads')
+def heads():
+    head_data = {'Biometrics, Software Engineering': 'Dr. Srikanth Prabhu',
+                 'Computer Aided Diagnosis & Assistive Technologies': 'Dr. P.C. Siddalingaswamy ',
+                 'Computer Vision & ML': 'Dr. Narendra V.G., Dr. R. Vijaya Arjunan',
+                 'Data Analytics': 'Dr. Dr. U. Dinesh Acharya, Dr. Krishnamoorthi M',
+                 'Data Mining': 'Dr. Geetha M., Dr. Harish S V',
+                 'High Performance Computing Systems, ANN & DL': 'Dr. N. Gopalakrishna Kini',
+                 'Natural Language Processing, Model based Analysis': 'Dr. Ashalatha Nayak',
+                 'Security, ML and DL' : 'Dr. Prema K V',
+                 'Security, Computer Vision': 'Dr. Renuka A.'}
+
+    return render_template('heads.html', heads = head_data)
+
+
 
 @app.route('/show/<string:name>/<int:s_num>')
 def display(name,s_num):

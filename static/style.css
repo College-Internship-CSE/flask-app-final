@@ -22,6 +22,14 @@ body {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
 }
 
 /* navbar */

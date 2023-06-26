@@ -100,3 +100,12 @@ hr {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+.app-card{
+  transition: all .2s ease-in-out;
+}
+
+.app-card:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

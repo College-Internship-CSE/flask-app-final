@@ -1,3 +1,8 @@
+/* .black-text
+{
+  color: black;
+} */
+
 .custom-card {
   background-color: #9AC5F4;
   color: white;
@@ -15,7 +20,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(117,223,203,1) 0%, rg
   justify-content: center;
 
 
-  
+
 }
 
 body {
@@ -28,7 +33,7 @@ body {
   flex-direction: column;
 }
 
-footer{
+footer {
   margin-top: auto;
 }
 
@@ -97,15 +102,24 @@ hr {
 }
 
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
   display: block;
+  /* margin-top: 0.125rem */
 }
 
-.app-card{
+.dropend:hover > .dropdown-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.app-card {
   transition: all .2s ease-in-out;
 }
 
-.app-card:hover{
+.app-card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+

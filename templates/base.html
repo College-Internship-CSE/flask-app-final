@@ -1,140 +1,157 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% block title %}
-        
+
+<head>
+  <title>{% block title %}
+
     {% endblock title %}</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
-    <!-- Bootstrap icons-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/style.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/style.css" />
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-      <div class="container">
-        <a class="navbar-brand hover-underline-animation" href="/">CSE MIT</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:ital@0;1&display=swap"
+    rel="stylesheet" />
+</head>
 
-            <script>
-                var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-  return new bootstrap.Dropdown(dropdownToggleEl)
-});
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand hover-underline-animation" href="/">CSE MIT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
 
-            </script>
+          <script>
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+            var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+              return new bootstrap.Dropdown(dropdownToggleEl)
+            });
 
-            <li class="nav-item dropdown" data-bs-theme="light">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Publications
+          </script>
+
+          <li class="nav-item dropdown" data-bs-theme="light">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Publications
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/show/conference/0">Conferences</a></li>
+              <li>
+                <a class="dropdown-item" href="/show/book/0">Book Chapters</a>
+              </li>
+              <li><a class="dropdown-item" href="/show/journal/0">Journals</a></li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown" data-bs-theme="light">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Funded Projects
+            </a>
+            <ul class="dropdown-menu">
+              <li class="nav-item dropend" data-bs-theme="light">
+                <a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  IL-IL MT
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/show/conference/0">Conferences</a></li>
+                  <li><a class="dropdown-item" href="/il-il">Website</a></li>
+                  <li><a class="dropdown-item" href="/v3-hindi">Kannada - Hindi MT</a></li>
                   <li>
-                    <a class="dropdown-item" href="/show/book/0">Book Chapters</a>
+                    <a class="dropdown-item" href="/splitter">Kannada Sandhi Splitter</a>
                   </li>
-                  <li><a class="dropdown-item" href="/show/journal/0">Journals</a></li>
-                  
+                  <li><a class="dropdown-item" href="/lipiconverter">Shreelipi to Unicode Converter</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item dropend" data-bs-theme="light">
+                <a class="dropdown-item" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  DL-DL MT
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/dl-dl">Website</a></li>
+                  <li><a class="dropdown-item" href="/v3-tamil">Kannada - Tamil MT</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/splitter">Kannada Sandhi Splitter</a>
+                  </li>
+                  <li><a class="dropdown-item" href="/lipiconverter">Shreelipi to Unicode Converter</a></li>
+
                 </ul>
               </li>
 
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="/show/patent/0"
-                >Patents</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="/show/phd/0">Phd Guided</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link hover-underline-animation" href="/show/heads">Research Groups <div class="card-group">
-                
-                </div>
-                </a>
-            </li>
-           
-          </ul>
-        </div>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="/show/patent/0">Patents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="/show/phd/0">Phd Guided</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="/show/heads">Research Groups <div class="card-group">
+
+              </div>
+            </a>
+          </li>
+
+        </ul>
       </div>
-    </nav>
-    <div>
-        {% block body %} {% endblock body %}
     </div>
-    
+  </nav>
+  <div>
+    {% block body %} {% endblock body %}
+  </div>
 
-    <!-- Footer -->
-    <footer class="text-center text-white bg-primary">
-        <!-- Grid container -->
-        <div class="container p-4"></div>
-        <!-- Grid container -->
-      
-        <!-- Year dynamically loaded with JavaScript -->
-        <div id="current-year" class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-          <!-- The year will be inserted here -->
-        </div>
-      
-        <script>
-          // Get the current year
-          var currentYear = new Date().getFullYear();
-      
-          // Update the element with the current year
-          document.getElementById("current-year").innerHTML = "© " + currentYear + " Manipal Institute of Technology<br />all rights reserved";
-        </script>
-      </footer>
-      
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Footer -->
+  <footer class="text-center text-white bg-primary">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <!-- Year dynamically loaded with JavaScript -->
+    <div id="current-year" class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <!-- The year will be inserted here -->
+    </div>
+
     <script>
-      AOS.init();
-    </script>
+      // Get the current year
+      var currentYear = new Date().getFullYear();
 
-    <!-- bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      // Update the element with the current year
+      document.getElementById("current-year").innerHTML = "© " + currentYear + " Manipal Institute of Technology<br />all rights reserved";
+    </script>
+  </footer>
+
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -71,7 +71,7 @@ footer{
 }
 
 /* To pull the content below the up */
-#features {
+#apps {
   margin-top: -100px;
 }
 
@@ -91,7 +91,7 @@ hr {
 }
 
 @media (max-width: 600px) {
-  #features {
+  #apps {
     margin-top: 0;
   }
 }
